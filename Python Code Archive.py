@@ -1,13 +1,10 @@
 
-"""
-##################################################
+
 ##################################################
 ############## REGULAR CODES #####################
 ##################################################
-##################################################
 
-# Area of 2 square at around a circle --->>>
-
+# Finds the area of 2 square at around a circle 
 radius=int(input("Enter radius"))
 innersquare=((radius*2)/(2**0.5))
 outersquare=radius*2
@@ -15,19 +12,17 @@ areainner=innersquare**2
 areaouter=outersquare**2
 print(areainner)
 print(areaouter)
-"""
 
-# ABSOLUTE NUMBER --->>>
-"""
+
+# ABSOLUTE NUMBER --->>> Finds absolute value of the given number
 x=int(input("Enter a number"))
 if x<0:
     x=-x
 print(x)
-"""
 
 
-# TICKET PRICE --->>>
-"""
+
+# TICKET PRICE --->>> Gives the ticket price according to the age
 price=3
 age=int(input("Enter your age"))
 if age<6 or age>18:
@@ -36,9 +31,9 @@ elif age>=6 and age<=18:
     print(price*0.50)
 else:
     print(price)
-"""   
-# SEASON SECTIONs --->>>
-"""
+   
+
+# SEASON SECTIONs --->>> Finds the weather according to the date of the given day.
 month=input("Enter the current month: ")
 day=int(input("Enter the current day: "))
 
@@ -74,13 +69,14 @@ elif month=="December":
         Season="Fall"
         
 print("Your current season is",Season)
-"""
+
+
 #################################
 
 # Try / Except - if/else
 
-################################# 26.10.2018
-"""
+#################################
+
 try:
     num=input("Enter a number or word: ")
     num=int(num)
@@ -97,9 +93,9 @@ except:
             print(num.upper())
         else:
             print(num.lower())
-"""
-###################################################################
-"""
+
+
+#Gives the result of graduation situation according to your GPA and Credits.
 gpa=float(input("Enter your GPA: "))
 lects=int(input("How many lectures you took? : "))
 if gpa<2.0 and lects<47:
@@ -110,9 +106,8 @@ elif gpa<2.0 and lects>=47:
     print("Your GPA is not enough !")
 else:
     print("Conguratulations!\nYou are Graduated.")
-"""
-###################################################################
-"""
+
+#Gives the roots of the equation with two unknowns.
 a=int(input("Enter your a component: "))
 b=int(input("Enter your b component: "))
 c=int(input("Enter your c component: "))
@@ -127,67 +122,58 @@ elif delta==0:
     print("You have only one root as:",r1)
 else:
     print("You have no roots.")
-"""
+	
 
-#################################
-"""
-##################################################
 ##################################################
 ################# FOR LOOPS ######################
 ##################################################
-##################################################
-"""
-################################# 02.11.2018
 
-
-"""
+#Prints 10 times "Hello" and 1 time "Good Bye!"
 for i in range(10):
     print("Hello")
 print("Good Bye!")
-"""
-###################################################################
-"""
+
+#Prints 0 to 16
 for i in range(17):
     print(i)
-"""
-###################################################################
-"""
+
+#For loop according to Start-Stop Values
 for i in range(2,17):
     print(i+0.5)
-"""
-###################################################################
-"""
+
+#For loop according to Start-Stop-Count Values
 for i in range(2,17,3):
     print(i)
-"""
-###################################################################
-"""
-movie_list=["Mad Max", "Interstellar", "Taxi Driver", "Whiplash", "The Prestige"]
 
+
+#Lists in for loop !
+
+movie_list=["Mad Max", "Interstellar", "Taxi Driver", "Whiplash", "The Prestige"]
 for i in range(len(movie_list)):
     print(movie_list[i])
-"""
+	
 ###################################################################
-"""
+
 for movie in movie_list:
     print(movie)
-"""
+	
 ###################################################################
-"""
+
 name="Yusuf"
 for char in name:
     print(char)
-"""
+	
 ###################################################################
-"""   
+
 sums=0
 nums=[8,60,43,55,25,134,1]
 for i in nums:
     sums+=i
 print(sums)
-"""
+
 ###################################################################
-"""
+
+#Power of a to b by for loop
 power_a=1
 a=int(input("Enter a number: "))
 b=int(input("Enter a number: "))
@@ -200,25 +186,28 @@ else:
     for i in range(0,b,-1):
         power_a/=a
     print(power_a)
-"""
+
 ###################################################################
-"""
+
+#Factorial n! with for loop
 factorial=1
 n=int(input("Enter a number: "))
 for i in range(n,1,-1):
     factorial*=i
 print(factorial)
-"""
+
 ###################################################################
-"""
+
+#Sum of digits of a string number
 sum_of_digits=0
 pos_int=input("Enter your number: ")
 for digit in pos_int:
     sum_of_digits+=int(digit)
 print(sum_of_digits)
-"""
+
 ###################################################################
-"""
+
+#Fibonacci with for loop
 a=0
 b=1
 x=int(input("How many number do you want? "))
@@ -227,11 +216,13 @@ for i in range(x):
     a = b
     b = c + b
     print(a)
-"""
-###################################################################
 
-### Yusuf HAYIRLI - 240201130 ### 09.11.2018
-"""
+
+##################################################
+################ WHILE LOOPS #####################
+##################################################
+
+#Sum of list of numbers with while loop
 nums=[8,60,43,55,25,134,1]
 a=0
 i=0
@@ -239,17 +230,9 @@ while i<len(nums):
     a+=nums[i]
     i+=1
 print(a)
-"""
-###################################################################
-"""
-##################################################
-##################################################
-################ WHILE LOOPS #####################
-##################################################
-##################################################
-"""
 
-"""
+
+#Greater Common Divisor finder of 2 integers with while loop
 while True:
     a=int(input("Enter your first number: "))
     b=int(input("Enter your second number: "))
@@ -267,10 +250,12 @@ while True:
             if check==1:
                 print("Your GCD is: 1")
     break
-"""
-###################################################################
-"""
 
+##################################################
+################### FILES ########################
+##################################################
+
+#Salary Keeper and Recorder
 name=""
 idd="1"
 while True:
@@ -293,15 +278,11 @@ file=open("Employee.txt","r")
 a=file.readlines()
 print(a)
 
-"""
-"""
-##################################################
-##################################################
-################### FILES ########################
-##################################################
-##################################################
-"""
-"""
+
+###################
+### MATRICES IN FILE ###
+###################
+
 A=[[0 for col in range(3)] for row in range(3)]
 B=[[0 for col in range(3)] for row in range(3)]
 file.open("matrices.txt","r")
@@ -314,9 +295,9 @@ for line in lines:
     for i in range(len(line)):
         A(row)[i]=int(line[i])
         row+=1
-"""
+
 ###################################################################
-"""
+
 file=open("matrices.txt","r+")
 
 A=[[0 for col in range(3)] for row in range(3)]
@@ -341,8 +322,9 @@ for i in range(0,3):
         SUM[i][j]=A[i][j]+B[i][j]
 
 print(SUM)
-"""
-"""
+
+###################################################################
+
 file.write("\n")
 file.write("Matrix Sum\n")
 for i in range(0,3):
@@ -351,41 +333,38 @@ for i in range(0,3):
         file.write(str(SUM[i][j])+" ")
     file.write("\n")
 print(SUM)
-"""
-# Yusuf HAYIRLI - 240201130 / 07.12.2018
-"""
-##################################################
+
 ##################################################
 ################# FUNCTIONS ######################
 ##################################################
-##################################################
-"""
-"""
-1- No Parameter + No return
+
+#1- No Parameter + No return
 def print_random_area():
     print(3.14*(random.randint(5,20)**2))
     
-2- Parameter + No return
+#2- Parameter + No return
 def print_area(radius):
     print(3.14*(radius**2))
 
-3- Default parameter + No return
+#3- Default parameter + No return
 def print_area(radius=10):
     print(3.14*(radius**2))
 
-4- Parameter + Return
+#4- Parameter + Return
 def get_area(radius):
     return 3.14*(radius**2)
 
-5- No parameter + Return
+#5- No parameter + Return
 def get_random_area():
     return (3.14*(random.randint(5,20)**2))
-"""
+
 ########################################################################
-"""
+
+#Area Finder Function
 def print_area(r):
     print(3.14*r*r)
-    
+   
+#Volume of Cube
 def cube(x):
     return x*x*x
 
@@ -394,9 +373,10 @@ def main():
     print(cube(3)) # Functional call 3 and 4
     
 main() # Functional call 1
-"""
+
 ########################################################################
-"""
+
+#Checks if the number n is prime or not
 def is_prime(n):
     if n < 2:
         return(False) # why not using else ?
@@ -408,35 +388,39 @@ def is_prime(n):
             continue
     return(True)
 
+#Checks if b and e are prime between or not.
 def print_primes_between(b,e):
     for i in range(b,e):
         if is_prime(i):
             print(i)
 
-def main():
+def main(): # Main Function to call
     x=int(input("begin? "))
     y=int(input("end? "))
     print_primes_between(x,y)
     
 main()
 
-def is_primee(x): # mine and simple.
+#Simplier is_Prime Function
+def is_primee(x):
     for i in range(2,x):
         if x%i==0:
             return False
     return True
 
-"""
 ########################################################################
-"""
+
 import random
-random.seed(12)
+random.seed(12) #It makes all runs have the same outputs.
+
+#Gets a random list range N and values between a and b in it.
 def get_rand_list(a,b,N):
     ListA=[]
     for i in range(N):
         ListA.append(random.randint(a,b))
     return ListA
 
+#Gets overlap of x,y
 def get_overlap(x,y):
     z=[]
     for i in x:
@@ -444,7 +428,7 @@ def get_overlap(x,y):
             z.append(i)
     return z
 
-def main():
+def main():  #Main function to call
     a=0
     b=10
     N=5
@@ -456,16 +440,12 @@ def main():
     print(z)
     
 main()
-"""
 
-"""
-##################################################
+
 ##################################################
 ################# DICTIONARYS ####################
 ##################################################
-##################################################
-"""
-"""
+
 books=["ULYSSES","ANIMAL FARM","BRAVE NEW","ENDER'S GAME"]
 
 def construct_dict(books):
@@ -487,19 +467,15 @@ def update_dict(x):
 print_dict()
 print("########### UPDATED #############")
 update_dict(construct_dict(books))
-"""
 
-"""
-##################################################
+
 ##################################################
 #################### SETS ########################
 ##################################################
-##################################################
-"""
-"""
+
 numbers1=[2,3,4,20,5,5,15]
 numbers2=[10,20,20,15,30,40]
-
+#It makes the list fill with unique elements (If any of them more than times in it, it erases extras and left only 1 of the same element)
 def unique_list(alist):
     alist=set(alist)
     alist=list(alist)
@@ -508,6 +484,7 @@ print("##########################################")
 print("Unique 1:",unique_list(numbers1))
 print("Unique 2:",unique_list(numbers2))
 
+#Takes intersection of a and b and returns it
 def intersection(alist,blist):
     alist=set(alist)
     blist=set(blist)
@@ -517,6 +494,7 @@ def intersection(alist,blist):
             clist.add(i)
     return list(clist)
 
+#Takes union of a and b and returns it
 def union(alist,blist):
     alist=set(alist)
     blist=set(blist)
@@ -528,16 +506,11 @@ def union(alist,blist):
 print("##########################################")
 print("Intersection:",intersection(numbers1,numbers2))
 print("Union:",union(numbers1,numbers2))
-"""
 
-"""
-##################################################
+
 ##################################################
 ################# RECURSIONS #####################
 ##################################################
-##################################################
-"""
-"""
 
 def itr_fact(n): ### Factorial with For
     result=1
@@ -565,7 +538,7 @@ print(harmonic(3))
 
 mylist=[1,2,3,4,6,10,12,16,7,5,3]
 
-def get_reversed(alist): ### Reverses the list
+def get_reversed(alist): ### Reverses the list (1,2,3 to 3,2,1)
     if len(alist)==1:
         return alist
     else:
@@ -585,7 +558,7 @@ def even_of_list(alist): ### Even of list's count
 
 print(even_of_list(mylist))
 
-import time #####
+import time # We have to import time
 
 def counter(t): ### TIMER 30 Sec to 0
     if t==0:
@@ -595,10 +568,9 @@ def counter(t): ### TIMER 30 Sec to 0
         time.sleep(1)
         counter(t-1)
         
-counter(30)
+counter(30) #Countdown 30 to 0
 
-"""
-"""
+
 ### Counts symbols in given string ###
 def count_specials(str): 
     if len(str)<1:
@@ -667,16 +639,12 @@ def pascal_triangle(n):
         all_lines.append(1)
         return all_lines
 
-print("########### Count Specials ###########")
-print(count_specials("gfsd+^%^+%+"))
-print("########### Reverse List ###########")
-print(reverse([3,4,6]))
-print("########### Single List Sum ###########")
-print(find_sum_a_list([2,3,4]))
-print("########### Nested List Sum ###########")
-print(find_sum_nested_lists([1,2,[4,5,2,[4,5]],7,10]))
-print("########### Pascal Triangle Last ###########")
-print(pascal_triangle_last_line(5))
-print("########### Pascal Triangle ###########")
-print(pascal_triangle(5))
-"""
+def main():
+	print(count_specials("gfsd+^%^+%+"))
+	print(reverse([3,4,6]))
+	print(find_sum_a_list([2,3,4]))
+	print(find_sum_nested_lists([1,2,[4,5,2,[4,5]],7,10]))
+	print(pascal_triangle_last_line(5))
+	print(pascal_triangle(5))
+
+main() #Better we have a main function to call all of them at once.
